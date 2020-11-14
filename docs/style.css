@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+*{padding: 0; margin:0;}*
+li{list-style: none;}
+body{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/back.jpg");
+}
+.wrap{width: 100%;}
+
+.title{padding:50px;background-color: sandybrown;}
+.title h1{color: white; text-align: center;}
+
+.nav{width:100%; overflow: auto; background-color:burlywood;}
+.nav li a{float: left; padding: 15px; color: white;text-align: center;width: 18%; text-decoration:none;}
+.nav li a:hover{ transition: .8s ease; background-color: sandybrown;}
+div.nav {border-style: solid;border-color:whitesmoke;border-width: 5px;}
+
+.image{
+    width: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin: 50px;
+    float: left
+}
+
+.image img{
+    width: 100%;
+}
+
+.image::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: grayscale(100%) ;
+    transition: 1s ease;
+}
+
+.image:hover::before{
+    width: 0;
+}
+
+
+.image:nth-child(1)::before{
+    background-image: url(img/jessica1.jpg);
+
+}
+.image:nth-child(2)::before{
+    background-image: url(img/jessica2.jpg);
+    
+}
+.image:nth-child(3)::before{
+    background-image: url(img/jessica3.jpg);
+    
+}
+
+.footer{text-align: center; margin: 40px}
+.footer h2{margin:20px; color: white;}
+.footer p{color:saddlebrown;}
